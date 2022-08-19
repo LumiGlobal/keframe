@@ -21,7 +21,7 @@ class FrameSeparateTaskQueue {
   FrameSeparateTaskQueue._();
 
   bool _hasRequestedAnEventLoopCallback = false;
-  int maxTaskSize = 0;
+  int maxTaskSize = 100;
 
   static FrameSeparateTaskQueue? _instance;
 
@@ -122,7 +122,7 @@ class FrameSeparateTaskQueue {
   }
 
   void resetMaxTaskSize() {
-    maxTaskSize = 0;
+    maxTaskSize = 100;
   }
 }
 
